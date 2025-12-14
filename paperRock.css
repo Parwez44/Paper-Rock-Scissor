@@ -1,71 +1,115 @@
-*{
-    padding: 0;
-    margin: 0;
-    background-color: whitesmoke;
-    font-family: 'Times New Roman', Times, serif;
-}
-h2{
-    text-align: center;
-}
-.img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 20px;
-    
-}
-img{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border-style: none;
-}
-.img :hover{
-    border: 8px solid black;
-    transition: 0.1s ease-in-out;
-}
-.score-board{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    text-align: center;
-    margin-top:30px;
-}
-.score-board p{
-    font-size: 25px;
-}
-.msg1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-.msg{
-    font-size: 20px;
-    background-color: green;
-    border-radius: 10px;
-    padding: 5px;
-    color: white;
-}
-.hide{
-    display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.reset{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
 }
-.reset p{
-    background-color: red;
-    font-size: large;
-    padding: 2px 10px;
-    color: whitesmoke;
-    border-radius: 8px;
-    border-style: none;
-    cursor: pointer;
+
+.main-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.15s ease, border 0.15s ease;
+}
+
+.img img:hover {
+  transform: scale(1.05);
+  border: 6px solid black;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.score-board p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.msg1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.msg {
+  font-size: 1.1rem;
+  background-color: green;
+  border-radius: 10px;
+  padding: 8px 16px;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.reset p {
+  background-color: red;
+  font-size: 1rem;
+  padding: 6px 18px;
+  color: whitesmoke;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+@media (max-width: 420px) {
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .score-board {
+    gap: 30px;
+  }
+
+  .score-board p {
+    font-size: 1.2rem;
+  }
+
+  .msg {
+    font-size: 1rem;
+  }
 }
